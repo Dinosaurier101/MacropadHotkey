@@ -5,14 +5,25 @@ import terminalio
 import supervisor
 
 from adafruit_macropad import MacroPad
+from adafruit_hid.consumer_control_code import ConsumerControlCode
 from adafruit_display_shapes.rect import Rect
 from adafruit_display_text import label
 
+
+### user defined
+
+# select your keyboard layout:
+# https://github.com/Neradoc/Circuitpython_Keyboard_Layouts
+# also add the keycode_... to your macros if they use Keycode.* values
+## QWERTY
+# none needed. already included in MacroPad. comment out the rest.
+## win_de (QWERTZ)
 from keyboard_layout_win_de import KeyboardLayout
 from keycode_win_de import Keycode
+## win_fr (AZERTY)
+# from keyboard_layout_win_fr import KeyboardLayout
+# from keycode_win_fr import Keycode
 
-
-### user defined variables
 pressed_color = 0xffffff    # led color of the pressed key
 MACRO_FOLDER = '/macros'    # folder where macro files are stored
 brightness = 0.1            # overall led pixel brightness
@@ -190,7 +201,11 @@ def display_setup():        # set up display groups
 
 
 ### initialisation
-macropad = MacroPad(rotation=0, layout_class=KeyboardLayout, keycode_class=Keycode)
+try:
+    macropad = MacroPad(layout_class=KeyboardLayout, keycode_class=Keycode)
+except:
+    macropad = MacroPad()
+
 macropad.display.auto_refresh = False   # don't automatically update screen to prevent flickering
 macropad.pixels.auto_write = False
 
