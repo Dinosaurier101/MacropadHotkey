@@ -172,7 +172,7 @@ def import_apps():          # import macros from 'MACRO_FOLDER'
             pass
 
 def display_setup():        # set up display groups
-    group.clear()
+    global group
     group = displayio.Group()
     for key_index in range(12):
         x = key_index % 3

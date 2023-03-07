@@ -3,7 +3,7 @@
 #from adafruit_hid.consumer_control_code import ConsumerControlCode
 
 app = {                       
-    'name' : '',    
+    'name' : 'Empty Macro',    
     'macros' : [    
         # COLOR    LABEL    KEY SEQUENCE    FUNCTION(optional)
         # 1st row ----------
