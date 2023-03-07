@@ -1,6 +1,6 @@
 # MacropadHotkey
 My own implementation of the [Macropad-Hotkeys](https://learn.adafruit.com/macropad-hotkeys/overview) firmware for Adafruit Macropad.
-Written in [CircuitPython](https://github.com/adafruit/circuitpython).
+For use with [CircuitPython](https://github.com/adafruit/circuitpython).
 
 ## Features
 - Compatible with original Macropad-Hotkey macros
