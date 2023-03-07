@@ -1,3 +1,5 @@
+#https://github.com/Dinosaurier101/MacropadHotkey
+
 import time
 import os
 import displayio
@@ -26,7 +28,7 @@ from keycode_win_de import Keycode
 
 pressed_color = 0xffffff    # led color of the pressed key
 MACRO_FOLDER = '/macros'    # folder where macro files are stored
-brightness = 0.1            # overall led pixel brightness
+brightness_default = 0.1            # overall led pixel brightness
 
 
 ### functions
@@ -223,6 +225,7 @@ import_apps()
 
 display_setup()
 
+brightness = brightness_default
 set_brightness()
 
 switch()
