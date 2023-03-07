@@ -207,7 +207,6 @@ except:
     macropad = MacroPad()
 
 macropad.display.auto_refresh = False   # don't automatically update screen to prevent flickering
-macropad.pixels.auto_write = False
 
 dim = 0         # dim = 1 allows to disable key illumination. set by encoder button.
 app_num = 0     # currently selected app/macro
@@ -234,13 +233,6 @@ while True:
 
     set_brightness()
 
-    if supervisor.runtime.usb_connected:
-        # print("Hello World!")
-        macropad.red_led = True
-    else:
-        macropad.red_led = False
-
-    # switch dim when encoder button is pressed
     macropad.encoder_switch_debounced.update()
     if macropad.encoder_switch_debounced.pressed:
         if dim == 0:
