@@ -11,3 +11,4 @@ For use with [CircuitPython](https://github.com/adafruit/circuitpython).
   Simply add your function to the end of each button macro:  
   as a string:   `(color, 'label', 'key sequence', 'function1')`  
   or as a list:  `(color, 'label', 'key sequence', ['function1', 'function2', 'more functions...'])`  
+  Examples can be found in the [Example Macro](https://github.com/Dinosaurier101/MacropadHotkey/blob/master/macros/example.py).
