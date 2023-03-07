@@ -15,7 +15,7 @@ For use with [CircuitPython](https://github.com/adafruit/circuitpython).
   or as a list:  `(color, 'label', 'key sequence', ['function1', 'function2', 'more functions...'])`  
   Examples can be found in the [Example Macro](https://github.com/Dinosaurier101/MacropadHotkey/blob/master/macros/example.py).
 
-## to-do
+## Future Plans
 - find way to handle lost usb connection error (caused by pc standby)
 - display blanking / standby
 - implement outputting values on display
