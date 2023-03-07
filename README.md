@@ -19,7 +19,7 @@ For use with [CircuitPython](https://github.com/adafruit/circuitpython).
 - find way to handle lost usb connection error (caused by pc standby)
 - display blanking / standby
 - implement outputting values on display
-- bootimage?
+- boot screen?
 - add more macros
 - add delay option for functions
 - led effects?
