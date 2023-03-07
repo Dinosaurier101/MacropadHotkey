@@ -16,10 +16,11 @@ For use with [CircuitPython](https://github.com/adafruit/circuitpython).
   Examples can be found in the [Example Macro](https://github.com/Dinosaurier101/MacropadHotkey/blob/master/macros/example.py).
 
 ## to-do
-- find way to handle lost usb connection (caused by pc standby)
+- find way to handle lost usb connection error (caused by pc standby)
 - display blanking / standby
 - implement outputting values on display
 - bootimage?
 - add more macros
 - add delay option for functions
 - led effects?
+- don't show drive unless key is pressed
