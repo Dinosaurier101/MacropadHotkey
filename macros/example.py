@@ -5,16 +5,16 @@ from adafruit_hid.consumer_control_code import ConsumerControlCode
 from adafruit_hid.mouse import Mouse
 
 app = {                     # REQUIRED dict, must be named 'app'
-    'name' : 'Example',        # Application name
+    'name' : 'Example',     # Application name
     'macros' : [            # List of button macros...
-        # COLOR    LABEL    KEY SEQUENCE    FUNCTION
+        # COLOR    LABEL    KEY SEQUENCE    FUNCTION(optional)
         # 1st row ----------
         (0xff0000, 'Key1', 'Quebec Whiskey Zulu Alpha!\n', ''),                                                                     # type 'Quebec Whiskey Zulu Alpha!' (to test if your Keyboard Layout is correctly set) and jump to next line
-        (0xff8000, 'Key2', ['Hello ', 1.0, 'World!'], ''),                                                                          # type 'Hello', wait 1s, type 'World!'
+        (0xff8000, 'Key2', ['Hello ', 1.0, 'World! '], ''),                                                                         # type 'Hello', wait 1s, type 'World!'
         (0xffff00, 'Keycode', [Keycode.WINDOWS, 'e'], ''),                                                                          # press the Windows-Key + 'e'
         # 2nd row ----------
-        (0x80ff00, 'Tone1', [{'tone':262}]),                                                                                        # play tone; this key has no FUNCTION to show it can be left out
-        (0x00ff00, 'Tone2', [{'tone':131}, 0.2, {'tone':262}, 0.2, {'tone':523}], ''),                                              # play melody
+        (0x80ff00, 'Tone1', [{'tone':500}]),                                                                                        # play tone; this key has no FUNCTION to show it can be left out
+        (0x00ff00, 'Tone2', [{'tone':400}, 0.2, {'tone':600}, 0.2, {'tone':800}], ''),                                              # play melody
         (0x00ff80, 'CCC', [[ConsumerControlCode.VOLUME_DECREMENT]], ''),                                                            # decrease your pc's volume
         # 3rd row ----------
         (0x00ffff, 'Mouse1', [{'buttons':Mouse.RIGHT_BUTTON}], ''),                                                                 # click with right mouse button

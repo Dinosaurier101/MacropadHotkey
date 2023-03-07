@@ -1,16 +1,16 @@
 #from adafruit_hid.keycode import Keycode # REQUIRED if using Keycode.* values  # use this for QWERTY
-from keycode_win_de import Keycode                                              # use this for QWERTZ
-#from adafruit_hid.consumer_control_code import ConsumerControlCode
+#from keycode_win_de import Keycode                                             # use this for QWERTZ
+#from keycode_win_fr import Keycode                                             # use this for AZERTY
 
 color=0xFFFFFF
 
 app = {                       
     'name' : 'Config', 
     'macros' : [
-        # COLOR    LABEL    KEY SEQUENCE
+        # COLOR    LABEL    KEY SEQUENCE    FUNCTION(optional)
         # 1st row ----------
         (color, 'Bri -', '', 'brightness = brightness - 0.05'),     
-        (color, 'reset', '', 'brightness = 0.1'),
+        (color, 'reset', '', 'brightness = brightness_default'),
         (color, 'Bri +', '', 'brightness = brightness + 0.05'), 
         # 2nd row ----------
         (color, '', ''),
